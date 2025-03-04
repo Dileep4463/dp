@@ -2,65 +2,125 @@
 <html>
 <head>
     <title>Registration Form</title>
+    <style>
+        body {
+            background-image: url('https://www.elegantthemes.com/blog/wp-content/uploads/2013/09/bg-11-full.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .form-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        .form-container {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            width: 80%;
+            max-width: 900px;
+        }
+        h1 {
+            text-align: center;
+            color: red;
+            width: 100%;
+        }
+        .form-half {
+            width: 50%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        label, input, select, textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        input[type="submit"], input[type="reset"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        strong {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1 style="text-align: center; color: red;">Registration Form</h1>
-    <form action="rep.html" method="get">
-        <label for="fname">First name: </label>
-        <input id="fname" name="fname" type="text" /><br /><br />
+    <div class="form-wrapper">
+        <form class="form-container" action="rep.html" method="get">
+            <h1>Registration Form</h1>
+            <div class="form-half">
+                <label for="fname">First name:</label>
+                <input id="fname" name="fname" type="text" /><br />
 
-        <label for="lname">Last name:</label>
-        <input id="lname" name="lname" type="text" /><br /><br />
+                <label for="lname">Last name:</label>
+                <input id="lname" name="lname" type="text" /><br />
 
-        <label for="email">Enter email:</label>
-        <input id="email" name="email" type="email" /><br /><br />
+                <label for="email">Enter email:</label>
+                <input id="email" name="email" type="email" /><br />
 
-        <label for="contact">Contact No:</label>
-        <input id="contact" name="contact" type="text" /><br /><br />
+                <label for="contact">Contact No:</label>
+                <input id="contact" name="contact" type="text" /><br />
 
-        <label for="dob">Date of Birth:</label>
-        <input id="dob" name="dob" type="date" /><br /><br />
+                <label for="dob">Date of Birth:</label>
+                <input id="dob" name="dob" type="date" /><br />
+            </div>
 
-        <strong>Select Gender:</strong><br />
-        <input id="male" name="gender" type="radio" value="Male" />
-        <label for="male">Male</label><br />
-        <input id="female" name="gender" type="radio" value="Female" />
-        <label for="female">Female</label><br />
-        <input id="other" name="gender" type="radio" value="Other" />
-        <label for="other">Other</label><br /><br />
+            <div class="form-half">
+                <label for="gender">Select Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select><br />
 
-        <strong>Select What you are:</strong><br />
-        <input id="person1" name="role" type="radio" value="Employee" />
-        <label for="person1">Employee</label><br />
-        <input id="person2" name="role" type="radio" value="Student" />
-        <label for="person2">Student</label><br /><br />
+                <strong>Select What you are:</strong>
+                <input id="person1" name="role" type="radio" value="Employee" />
+                <label for="person1">Employee</label>
+                <input id="person2" name="role" type="radio" value="Student" />
+                <label for="person2">Student</label><br />
 
-        <strong>Select Course:</strong><br />
-        <input id="course1" name="course" type="checkbox" value="Manual Testing" />
-        <label for="course1">Manual Testing</label><br />
-        <input id="course2" name="course" type="checkbox" value="Automation Testing" />
-        <label for="course2">Automation Testing</label><br />
-        <input id="course3" name="course" type="checkbox" value="Java" />
-        <label for="course3">Java</label><br />
-        <input id="course4" name="course" type="checkbox" value="Machine Learning" />
-        <label for="course4">Machine Learning</label><br /><br />
+                <strong>Select Course:</strong>
+                <input id="course1" name="course" type="checkbox" value="Manual Testing" />
+                <label for="course1">Manual Testing</label>
+                <input id="course2" name="course" type="checkbox" value="Automation Testing" />
+                <label for="course2">Automation Testing</label>
+                <input id="course3" name="course" type="checkbox" value="Java" />
+                <label for="course3">Java</label>
+                <input id="course4" name="course" type="checkbox" value="Machine Learning" />
+                <label for="course4">Machine Learning</label><br />
 
-        <label for="department">Select Department:</label>
-        <select id="department" name="department">
-            <option value="IT">IT</option>
-            <option value="HR">HR</option>
-            <option value="Finance">Finance</option>
-            <option value="Marketing">Marketing</option>
-        </select><br /><br />
+                <label for="department">Select Department:</label>
+                <select id="department" name="department">
+                    <option value="IT">IT</option>
+                    <option value="HR">HR</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Marketing">Marketing</option>
+                </select><br />
 
-        <label for="comments">Additional Comments:</label><br />
-        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br /><br />
+                <label for="comments">Additional Comments:</label>
+                <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br />
 
-        <input type="submit" value="Submit" />
-        <input type="reset" value="Reset" />
-    </form>
-
-    <p><a href="combine.html">Home Page</a></p>
-    <p><a href="index.html">Back</a></p>
+                <input type="submit" value="Submit" />
+                <input type="reset" value="Reset" />
+            </div>
+        </form>
+    </div>
 </body>
 </html>
